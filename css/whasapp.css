@@ -1,0 +1,108 @@
+/*******************************/
+/********* whasapp CSS **********/
+/*******************************/
+
+*{
+	margin: 0;
+	padding: 0;
+
+	
+}
+
+	
+.formulario{
+    width: 290px;
+    background: #030303d1;
+    height: 400px;
+    padding: 7px 25px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 20px 5px rgb(0 0 0 / 20%);
+}
+
+.formulario h9{
+	text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    color:#2F855A;
+}
+
+.box-input{
+	border-bottom: 2px solid #adadad;
+	position: relative;
+	margin: 30px 0;
+}
+
+.box-input input{
+	font-size: 16px;
+	color: #ffffff;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	padding: 0 5px;
+	height: 40px;
+}
+
+.box-input span::before{
+	content: attr(data-placeholder);
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #adadad;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: .5s;
+}
+
+.box-input span::after{
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	
+	transition: .5s;
+}
+
+.focus + span::before{
+	top: -5px;
+}
+
+.focus + span::after{
+	width: 100%;
+}
+
+.boton{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: #48bb78;
+	border: solid 2px #48bb78;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 18px;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.boton:hover{
+	background-color: #2F855A;
+	border: solid 2px #2F855A;
+	transition: .5s;
+}
+
+
+/*******************************/
+/********* wapp fin CSS **********/
+/*******************************/
+
+
+
+
+
+
+

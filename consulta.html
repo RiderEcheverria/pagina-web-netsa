@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./jquery.dataTables.min.css"> 
+	<title>Consulta del Cliente </title>
+  </head>
+  <body>      
+  <div class="wrapper">
+   <div class="content-wrapper">	 
+    
+	<div class="row">
+	  <div class="form-group col-md-4">
+			<label>Cliente</label>
+			<input type="hidden"  name="id_clie" id="id_clie" >                  
+		    <input type="text" class="form-control" placeholder="Nombre del cliente" id="nomb_clie" name="nomb_clie" readonly="">              						
+	  </div>		
+	  <div class="form-group col-md-4">
+		 <label>C.I.</label>
+		 <input type="text" class="form-control" placeholder="CI del cliente" id="ci_clie" name="ci_clie" readonly="">              
+		 
+		</div>		
+		<div class="form-group col-md-4">
+		<label>NIT</label>
+		<input type="text" class="form-control" placeholder="NIT del cliente" id="nit_clie" name="nit_clie" readonly="">              			
+	  </div>		
+	</div><!-- <div class="row"> -->
+	
+	<div class="row">
+		<div class="col-md-4">
+			<label>Contactos</label>
+			<input type="text" class="form-control" placeholder="telefonos del cliente" id="celu_clie" name="celu_clie" readonly="">              		
+		</div>		
+		<div class="col-md-4">
+			<label>Dirección</label>
+			<input type="text" class="form-control" placeholder="domicilio del cliente" id="dire_clie" name="dire_clie" readonly="">			
+		</div>				
+	</div><!--<div class="row">-->	
+	
+	<div class="row">
+	  <div class="form-group col-md-4"></div>		
+		<div class="form-group col-md-4">
+			<label>Consultas</label>
+            <select id="select-consulta" class="form-control select2" style="width: 100%;">
+                <option selected=""></option>
+                <option value="1">Historial</option>
+                <option value="2">Pagados</option>
+                <option value="3">Debe</option>
+            </select>
+		</div>		
+		<div class="form-group col-md-4"></div>
+	</div><!-- <div class="row">-->
+	
+	
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class=" table-responsive">
+			   <table id="tbl-consulta" 
+					class="table2 table-bordered table-striped text-center" style="width:100%;"> 
+					<thead><tr></tr></thead>
+					<tbody></tbody>
+			   </table>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	</div><!--<div class="content-wrapper">-->
+	</div><!--<div class="wrapper">-->
+   
+	<script src="./jquery-3.6.0.js"></script>
+	
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="./jquery.dataTables.min.js"></script>
+		
+<script type="text/javascript"> 	
+var datos={
+celu_clie: "69222543 / ",
+ci_clie: "4699662 SC",
+cort: null,
+desctot: "0.00",
+dire_clie: "BARRIO ISLA DEL PALMAR CALLE PACAY",
+estado: "<span class=\"badge badge bg-info\">Activo</span>",
+fecha: "2018-11-06",
+fecha_cort: "",
+glosa: "LITE BEAM M5-ROUTER 840N",
+id: "20100043",
+id_clie: "54",
+id_contr: "20100043",
+id_plan: "1",
+id_zona: "7",
+ingresado: "1",
+mb_plan: "3",
+mes: " ",
+nit_clie: "4699662",
+nomb_ap: "Ap 4 netsa srl los lotes",
+nomb_clie: "ERVIN SEAS GALVIS ",
+nomb_plan: "PLAN BASICO",
+nomb_zona: "ZONA LOS LOTES",
+nota: "",
+pppoe: "",
+razon_clie: "",
+tarifa_plan: null,
+ubi: ""};
+	
+var tablaDetalle=function()
+{	   
+    // your datatable code ...
+	var opcion=$("#select-consulta").val();
+    var dat = 
+    {  	  	
+       dato: "",
+       tipo:opcion,
+       tipoe:1,
+       id:datos.id_clie
+    };
+
+	//cconsole.log("input-dat=>",dat);
+    //  $("#detalle").val()=1,historial
+    //  $("#detalle").val()=2,pagados
+    //  $("#detalle").val()=3,debe 
+/*
+var url ="kardex.php";
+
+  $.ajax
+    ({
+      type: "POST",   
+      dataType: 'json', 
+      data:dat,
+      "url":url,      
+      success: function (datos)     
+      {  
+         console.log("loadTecnicos()/datos/ouput/",datos); 
+      },
+    });
+
+return;
+*/
+
+    var visible_debe=true;var Total="haber";
+    if(opcion=="3")
+    {   
+       visible_debe=false;
+       Total="debe";
+    }  
+    //  $("#detalle").val()=2,pagados
+    //  $("#detalle").val()=3,debe 			
+
+  var url="https://netsabolivia.com/sistema/rider/luis/kardex.php" 
+
+
+    if(opcion=="2" || opcion=="3")
+    {
+	
+        setTimeout(function()
+        {
+            $('#tbl-consulta tbody').remove();
+                    $('#tbl-consulta').DataTable
+                    ({ 
+                       "destroy":true,
+                       scrollY:"250px",     
+                       scrollCollapse: true,            
+                        responsive: true,
+                        "aProcessing":true,
+                        "aServerSide":true,
+                        "language": 
+                        { 
+                          "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                        },
+                    "ajax":
+                        {
+                          type: "POST",data:dat,
+                        //  "url":rut+"verificar/get_Kardex",
+						  //"url":"kardex.php",
+                        "url":url,
+                          "dataSrc":"",
+                          /*
+                           dataFilter: function(data)
+                           { 
+                                 var json = jQuery.parseJSON(data);
+                                if(data!=null)
+                                { 
+                                    console.log("total-registros=>",json.length);
+                                    console.log("json=>",json);
+                                }
+                                return JSON.stringify( json ); // return JSON string 
+                            }
+                            */
+                        },            
+                        "columns": 
+                            [   
+                                { sTitle: "No","data": "nro" },
+                                { sTitle: "Fecha","data": "fecha" },
+                                // nomb_caja:invisible, para debe 
+                                { sTitle: "Caja","data": "nomb_caja" },
+                                { sTitle: "Plan","data": "nomb_plan"},
+                                { sTitle: "Periodo","data": "mes"},
+                                {"width": "40%", 
+                                // glosa: invisible, para debe 
+                                sTitle: "Glosa","data": "glosa",className: "text-left"},
+                                 
+                                {sTitle: "Total","data": Total,className: "debe"},
+                                {sTitle: "Usuario","data": "nomb_usr"},
+                                //opciones:invisible para el debe
+                                // {sTitle: "Opciones","data": "opciones"} 
+                            ],                            
+                        "columnDefs": 
+                                [   
+                                    { 
+                                      "targets": [ 2 ],
+                                      "visible": visible_debe
+                                    },
+                                    {  
+                                       "targets": [ 5 ],
+                                       "visible": visible_debe
+                                    }/*,
+                                    {  
+                                      "targets": [ 8 ],
+                                      "visible": visible_debe
+                                    }
+									*/
+                                ], 
+                    select: true,dom: 'lrtip',
+                    searching: true, paging: false, info: false
+                });                       
+            var table = $('#tbl-consulta').DataTable();             
+                $('#btnSearch_det').click(function ()
+                {
+                  var palabra= $("#buscar_det").val();
+                      table.ajax.reload();
+                      table.search(palabra).draw();
+                }); 
+                $("#buscar_det").keyup(function(event) 
+                {       
+                    if(event.keyCode === 13) 
+                    {         
+                       var palabra= $("#buscar_det").val();
+                      //  console.log(palabra);
+                        table.ajax.reload();
+                        table.search(palabra).draw();
+                    }
+                    else
+                    {       
+                      var palabra= $("#buscar_det").val();
+                          table.search(palabra).draw(); 
+                    }
+                });
+
+                $('#tbl-consulta tbody').on( 'click', 'tr', function () 
+                {  
+                  datosE=table.row( this ).data(); 
+                  console.log("loadTableDetalle()/datosE=>",datosE); 
+                  if($(this).hasClass('selected')) 
+                  { 
+                    if(!visible_debe)
+                    {      
+                        for(let i = 0; i < listacobro.length; i++)
+                        {  
+                           if(datosE.id==listacobro[i].id)
+                           { 
+                             listacobro.splice(i,1);
+                           }
+                        }
+                    } 
+                    sel_idl=-1;
+                    $(this).removeClass('selected');                     
+                  }
+                  else 
+                  {              
+                       sel_idl=table.row(this).index();
+                       if(visible_debe)
+                       {    
+                         table.$('tr.selected').removeClass('selected');
+                       } 
+                      var mes_nro=getMesNro(datosE.mes);                      
+                      
+                      if(!visible_debe)//3,debe
+                      { 
+                        listacobro.push
+                        ({  
+                           id:datosE.id,
+                           id_contr:datosE.id_contr,
+                           nomb_plan:datosE.nomb_plan,
+                           mes:mes_nro,
+                           saldo:datosE.debe,
+                        });                           
+                      } 
+                    $(this).addClass('selected');
+                  } 
+                  if(!visible_debe)//3
+                   {calcularDebe();} 
+                });             
+        },1000); //setTimeout(function()  
+	
+  }// if($("#detalle").val()=="2" || $("#detalle").val()=="3") 
+  else 
+  {     
+    //  $("#detalle").val()=1,historial ... 
+	
+    if(opcion=="1")
+    {	     
+     // https://datatables.net/extensions/keytable/integration#Focus-selection  
+		
+        setTimeout(function() 
+        {
+          $('#tbl-consulta tbody').remove();
+          $('#tbl-consulta').DataTable
+          ({
+            "destroy":true,
+            scrollY:"250px",            
+            scrollCollapse: true,            
+            responsive: true,
+            "aProcessing":true,
+            "aServerSide":true,
+            "language":
+            { 
+              "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            },
+            "ajax":
+             {      
+                type: "POST",data:dat,
+                //"url":rut+"verificar/get_Kardex",
+				      //"url":"kardex.php",
+              "url":url,
+                "dataSrc":"",
+           
+
+              /*
+                dataFilter: function(data)
+                { 
+                    var json = jQuery.parseJSON(data);
+                    if(data!=null)
+                    {  
+                        console.log("total-registros-historial=>",json.length);
+                       console.log("json-historial=>",json);
+                    } 
+                    return JSON.stringify( json ); // return JSON string 
+                } 
+              */
+
+             },              
+                "columns": 
+                [   
+                    { sTitle: "No","data": "nro" },
+                    { sTitle: "Fecha","data": "fecha" },
+                    { sTitle: "Nota","data": "id" },
+                    { sTitle: "Sucursal","data": "nomb_sucu"},
+                    { "width": "40%",
+                    sTitle: "Glosa","data": "desc",
+                       className: "text-left" },
+                    { sTitle: "Debe","data": "debe" },
+                    { sTitle: "Haber","data": "haber" },
+                    { sTitle: "Saldo","data": "saldo"},
+                    // opciones,columna invisible ...
+                    //{sTitle: "Opciones","data": "opciones"}
+                ],
+				/*
+                "columnDefs": 
+                        [   
+                          {  
+                            "targets": [ 8 ],
+                            "visible": false
+                          } 
+                        ], 
+						*/
+            select: true,dom: 'lrtip',
+            searching: true, paging: false, info: false
+           });
+
+        var table = $('#tbl-consulta').DataTable();
+        $('#btnSearch_det').click(function ()
+        {
+           var palabra= $("#buscar_det").val();
+               table.ajax.reload();
+               table.search(palabra).draw();
+        });  
+
+        $("#buscar_det").keyup(function(event) 
+        {  
+           if(event.keyCode === 13) 
+           {  
+              var palabra= $("#buscar_det").val();
+            //  console.log(palabra);
+              table.ajax.reload();
+              table.search(palabra).draw();
+           }
+          else
+          {   
+            var palabra= $("#buscar_det").val();
+            table.search(palabra).draw();
+          }
+        }); 
+        $('#tbl-consulta tbody').on( 'click', 'tr', function () 
+        {         
+            if($(this).hasClass('selected')) 
+            {        
+               sel_idl=-1;
+               $(this).removeClass('selected');
+            }  
+            else 
+            {   
+               datosE=table.row( this ).data();
+               sel_idl=table.row(this).index();
+               table.$('tr.selected').removeClass('selected');
+               $(this).addClass('selected');
+            } 
+         });
+       },1000);//setTimeout(function() 
+	   
+	   
+   }// if($("#detalle").val()=="1") 	   
+  }// if($("#detalle").val()=="2" || $("#detalle").val()=="3") 
+  return true;
+}
+
+$("#select-consulta").change(function()
+{ 	       
+  //alert(" cambio en detalle a !!! "+$(this).val() );
+  tablaDetalle(); 
+});
+
+</script>
+  </body>
+</html>

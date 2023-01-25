@@ -1,0 +1,537 @@
+
+
+
+#menu > ul > li > a,
+a.action_button,
+#overlay-menu ul li a {
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0px;
+}
+#overlay-menu ul li a {
+	line-height: 24px;
+}
+#Subheader .title {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 500;
+	letter-spacing: 0px;
+}
+h1,
+.text-logo #logo {
+	font-size: 48px;
+	line-height: 50px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+h2 {
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 600;
+	letter-spacing: 0px;
+}
+h3 {
+	font-size: 25px;
+	line-height: 29px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+h4 {
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+h5 {
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+h6 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: 600;
+	letter-spacing: 0px;
+}
+#Intro .intro-title {
+	font-size: 70px;
+	line-height: 70px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body {
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0px;
+	}
+	.big {
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0px;
+	}
+	#menu > ul > li > a,
+	a.action_button,
+	#overlay-menu ul li a {
+		font-size: 14px;
+		letter-spacing: 0px;
+	}
+	#overlay-menu ul li a {
+		line-height: 21px;
+		letter-spacing: 0px;
+	}
+	#Subheader .title {
+		font-size: 51px;
+		line-height: 51px;
+		letter-spacing: 0px;
+	}
+	h1,
+	.text-logo #logo {
+		font-size: 41px;
+		line-height: 43px;
+		letter-spacing: 0px;
+	}
+	h2 {
+		font-size: 34px;
+		line-height: 43px;
+		letter-spacing: 0px;
+	}
+	h3 {
+		font-size: 21px;
+		line-height: 25px;
+		letter-spacing: 0px;
+	}
+	h4 {
+		font-size: 18px;
+		line-height: 26px;
+		letter-spacing: 0px;
+	}
+	h5 {
+		font-size: 15px;
+		line-height: 24px;
+		letter-spacing: 0px;
+	}
+	h6 {
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0px;
+	}
+	#Intro .intro-title {
+		font-size: 60px;
+		line-height: 60px;
+		letter-spacing: 0px;
+	}
+	blockquote {
+		font-size: 15px;
+	}
+	.chart_box .chart .num {
+		font-size: 45px;
+		line-height: 45px;
+	}
+	.counter .desc_wrapper .number-wrapper {
+		font-size: 45px;
+		line-height: 45px;
+	}
+	.counter .desc_wrapper .title {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.faq .question .title {
+		font-size: 14px;
+	}
+	.fancy_heading .title {
+		font-size: 38px;
+		line-height: 38px;
+	}
+	.offer .offer_li .desc_wrapper .title h3 {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.offer_thumb_ul li.offer_thumb_li .desc_wrapper .title h3 {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.pricing-box .plan-header h2 {
+		font-size: 27px;
+		line-height: 27px;
+	}
+	.pricing-box .plan-header .price > span {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.pricing-box .plan-header .price sup.currency {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.pricing-box .plan-header .price sup.period {
+		font-size: 14px;
+		line-height: 14px;
+	}
+	.quick_fact .number {
+		font-size: 80px;
+		line-height: 80px;
+	}
+	.trailer_box .desc h2 {
+		font-size: 27px;
+		line-height: 27px;
+	}
+	.widget > h3 {
+		font-size: 17px;
+		line-height: 20px;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	.big {
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0px;
+	}
+	#menu > ul > li > a,
+	a.action_button,
+	#overlay-menu ul li a {
+		font-size: 13px;
+		letter-spacing: 0px;
+	}
+	#overlay-menu ul li a {
+		line-height: 19.5px;
+		letter-spacing: 0px;
+	}
+	#Subheader .title {
+		font-size: 45px;
+		line-height: 45px;
+		letter-spacing: 0px;
+	}
+	h1,
+	.text-logo #logo {
+		font-size: 36px;
+		line-height: 38px;
+		letter-spacing: 0px;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 38px;
+		letter-spacing: 0px;
+	}
+	h3 {
+		font-size: 19px;
+		line-height: 22px;
+		letter-spacing: 0px;
+	}
+	h4 {
+		font-size: 16px;
+		line-height: 23px;
+		letter-spacing: 0px;
+	}
+	h5 {
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0px;
+	}
+	h6 {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	#Intro .intro-title {
+		font-size: 53px;
+		line-height: 53px;
+		letter-spacing: 0px;
+	}
+	blockquote {
+		font-size: 14px;
+	}
+	.chart_box .chart .num {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.counter .desc_wrapper .number-wrapper {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.counter .desc_wrapper .title {
+		font-size: 13px;
+		line-height: 16px;
+	}
+	.faq .question .title {
+		font-size: 13px;
+	}
+	.fancy_heading .title {
+		font-size: 34px;
+		line-height: 34px;
+	}
+	.offer .offer_li .desc_wrapper .title h3 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.offer_thumb_ul li.offer_thumb_li .desc_wrapper .title h3 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.pricing-box .plan-header h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.pricing-box .plan-header .price > span {
+		font-size: 34px;
+		line-height: 34px;
+	}
+	.pricing-box .plan-header .price sup.currency {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.pricing-box .plan-header .price sup.period {
+		font-size: 13px;
+		line-height: 13px;
+	}
+	.quick_fact .number {
+		font-size: 70px;
+		line-height: 70px;
+	}
+	.trailer_box .desc h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.widget > h3 {
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+@media only screen and (max-width: 479px) {
+	body {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	.big {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	#menu > ul > li > a,
+	a.action_button,
+	#overlay-menu ul li a {
+		font-size: 13px;
+		letter-spacing: 0px;
+	}
+	#overlay-menu ul li a {
+		line-height: 19.5px;
+		letter-spacing: 0px;
+	}
+	#Subheader .title {
+		font-size: 36px;
+		line-height: 36px;
+		letter-spacing: 0px;
+	}
+	h1,
+	.text-logo #logo {
+		font-size: 29px;
+		line-height: 30px;
+		letter-spacing: 0px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 30px;
+		letter-spacing: 0px;
+	}
+	h3 {
+		font-size: 15px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	h4 {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	h5 {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	h6 {
+		font-size: 13px;
+		line-height: 19px;
+		letter-spacing: 0px;
+	}
+	#Intro .intro-title {
+		font-size: 42px;
+		line-height: 42px;
+		letter-spacing: 0px;
+	}
+	blockquote {
+		font-size: 13px;
+	}
+	.chart_box .chart .num {
+		font-size: 35px;
+		line-height: 35px;
+	}
+	.counter .desc_wrapper .number-wrapper {
+		font-size: 35px;
+		line-height: 35px;
+	}
+	.counter .desc_wrapper .title {
+		font-size: 13px;
+		line-height: 26px;
+	}
+	.faq .question .title {
+		font-size: 13px;
+	}
+	.fancy_heading .title {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.offer .offer_li .desc_wrapper .title h3 {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.offer_thumb_ul li.offer_thumb_li .desc_wrapper .title h3 {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.pricing-box .plan-header h2 {
+		font-size: 21px;
+		line-height: 21px;
+	}
+	.pricing-box .plan-header .price > span {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.pricing-box .plan-header .price sup.currency {
+		font-size: 14px;
+		line-height: 14px;
+	}
+	.pricing-box .plan-header .price sup.period {
+		font-size: 13px;
+		line-height: 13px;
+	}
+	.quick_fact .number {
+		font-size: 60px;
+		line-height: 60px;
+	}
+	.trailer_box .desc h2 {
+		font-size: 21px;
+		line-height: 21px;
+	}
+	.widget > h3 {
+		font-size: 15px;
+		line-height: 18px;
+	}
+}
+.with_aside .sidebar.columns {
+	width: 30%;
+}
+.with_aside .sections_group {
+	width: 70%;
+}
+.aside_both .sidebar.columns {
+	width: 25%;
+}
+.aside_both .sidebar.sidebar-1 {
+	margin-left: -75%;
+}
+.aside_both .sections_group {
+	width: 50%;
+	margin-left: 25%;
+}
+@media only screen and (min-width: 1240px) {
+	#Wrapper,
+	.with_aside .content_wrapper {
+		max-width: 1240px;
+	}
+	.section_wrapper,
+	.container {
+		max-width: 1220px;
+	}
+	.layout-boxed.header-boxed #Top_bar.is-sticky {
+		max-width: 1240px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.section_wrapper,
+	.container,
+	.four.columns .widget-area {
+		max-width: 480px !important;
+	}
+}
+#Top_bar #logo,
+.header-fixed #Top_bar #logo,
+.header-plain #Top_bar #logo,
+.header-transparent #Top_bar #logo {
+	height: 100px;
+	line-height: 100px;
+	padding: 15px 0;
+}
+.logo-overflow #Top_bar:not(.is-sticky) .logo {
+	height: 130px;
+}
+#Top_bar .menu > li > a {
+	padding: 35px 0;
+}
+.menu-highlight:not(.header-creative) #Top_bar .menu > li > a {
+	margin: 40px 0;
+}
+.header-plain:not(.menu-highlight)
+	#Top_bar
+	.menu
+	> li
+	> a
+	span:not(.description) {
+	line-height: 130px;
+}
+.header-fixed #Top_bar .menu > li > a {
+	padding: 50px 0;
+}
+#Top_bar .top_bar_right,
+.header-plain #Top_bar .top_bar_right {
+	height: 130px;
+}
+#Top_bar .top_bar_right_wrapper {
+	top: 45px;
+}
+.header-plain #Top_bar a#header_cart,
+.header-plain #Top_bar a#search_button,
+.header-plain #Top_bar .wpml-languages,
+.header-plain #Top_bar a.action_button {
+	line-height: 130px;
+}
+@media only screen and (max-width: 767px) {
+	#Top_bar a.responsive-menu-toggle {
+		top: 60px;
+	}
+	.mobile-header-mini #Top_bar #logo {
+		height: 50px !important;
+		line-height: 50px !important;
+		margin: 5px 0;
+	}
+}
+.twentytwenty-before-label::before {
+	content: "Antes";
+}
+.twentytwenty-after-label::before {
+	content: "Después";
+}
+#Side_slide {
+	right: -250px;
+	width: 250px;
+}
+#Side_slide.left {
+	left: -250px;
+}
+.blog-teaser li .desc-wrapper .desc {
+	background-position-y: -1px;
+}
+form input.display-none {
+	display: none !important;
+}
+#Subheader {
+	padding: 230px 0 50px;
+}
+#Footer .widgets_wrapper {
+	padding: 90px 0;
+}

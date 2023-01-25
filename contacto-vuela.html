@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es" class="no-js" itemscope itemtype="https://schema.org/WebPage">
+<head>
+<meta charset="UTF-8" />
+<title>Contacto &#8211; Vuela.bo</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<script type="text/javascript" data-cfasync="false">	
+	var mi_track_user      = true;
+	var disableStr = 'ga-disable-UA-118436571-1';
+</script>
+<!--estilo de los inputs de  -->
+<link rel='stylesheet' id='mfn-shortcodes-css'  href='https://vuela.bo/wp-content/themes/betheme/css/shortcodes.css?ver=21.7.5' type='text/css' media='all' />
+
+
+<script type='text/javascript' src='https://vuela.bo/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<!-- se necesita -->
+<script type='text/javascript' src='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/media/form_geocode.js?ver=0.0.1'></script>
+
+</head>
+<body>	
+								<div class="ginput_complex ginput_container has_map has_latlng">
+									  <div id="geocode_map_input_1_11" class="leafletphp" data-leafletphp="geocode_map_input_1_11">
+
+									<script data-leafletphp="geocode_map_input_1_11">
+									jQuery(document).ready(function() { new function()
+										{
+										this.scriptid = "geocode_map_input_1_11"
+									var map = this.map = L.map("geocode_map_input_1_11", {"center":[-15.824748,-64.754509999999996],"zoom":4.5});
+
+									this.basemaps = {};
+
+									var default_basemap = this.basemaps.default_basemap = L.tileLayer.apply(this,["\/\/{s}.tile.openstreetmap.org\/{z}\/{x}\/{y}.png",{"maxZoom":19,"attribution":"&copy; <a href=\"http:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a>"}]).addTo(this.map);
+
+									this.layers = {};
+
+									var editthis = this.layers.editthis= L.geoJSON.apply(this,[null]).addTo(this.map);
+
+									this.controls = {};
+
+									var drawControl = this.controls.drawControl = new L.Control.Draw({"draw":{"polyline":false,"polygon":false,"circle":false,"rectangle":false},"edit":{"featureGroup":editthis}});
+
+									this.map.addControl(drawControl);
+
+									window.geocode_map_input_1_11 = this;
+
+									jQuery("#geocode_map_input_1_11").trigger("leafletphp/loaded",this);
+
+									};});
+									</script>
+									 </div>
+
+
+									<input name='input_11' id='input_1_11' type='hidden' value='' class='large'  tabindex='14'  aria-invalid="false" />
+
+									<span class="ginput_left">
+										<input class='gf_left_half' id='input_1_11_lat' type='text' value=''>
+										<label for='input_1_11_lat'>Latitude</label>
+									</span>
+
+									<span class="ginput_right ginput_container">
+										<input class='gf_right_half' id='input_1_11_lng' type='text' value=''>
+										<label for='input_1_11_lng'>Longitude</label>
+									</span>
+									   <!-- controla el soltar gps en el mapa -->
+									  <script>jQuery(document).ready(function(){new gfg_sync_data("input_1_11");});</script>
+									 </div>
+<!--inicio leaflet -->
+<link rel='stylesheet' id='leafletphp-css-css'  href='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/lib/leaflet-php/assets/leafletphp.css?ver=0.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='leafletphp-leaflet-css-css'  href='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/lib/leaflet-php/assets/leaflet/leaflet.css?ver=0.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='leafletphp-draw-css-css'  href='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/lib/leaflet-php/assets/Leaflet.draw/dist/leaflet.draw.css?ver=0.0.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/lib/leaflet-php/assets/leaflet/leaflet.js?ver=0.0.1'></script>
+<script type='text/javascript' src='https://vuela.bo/wp-content/plugins/brilliant-geocoder-gravity-forms/lib/leaflet-php/assets/Leaflet.draw/dist/leaflet.draw.js?ver=0.0.1'>
+</script>
+<!--fin leaflet -->
+</body>
+</html>
